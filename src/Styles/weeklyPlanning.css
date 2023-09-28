@@ -1,0 +1,36 @@
+.week-display {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    height: 50%;
+}
+
+.week-title {
+    background-color: var(--secondary-color);
+}
+
+.days-display {
+    display: flex;
+    flex-direction: row;
+}
+
+.day {
+    padding: 20px;
+}
+
+.tasks-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.tasks {
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    width: 50%;
+}

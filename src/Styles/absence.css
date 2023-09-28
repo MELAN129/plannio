@@ -1,0 +1,4 @@
+.month-choice {
+    display: flex;
+    flex-direction: row;
+}

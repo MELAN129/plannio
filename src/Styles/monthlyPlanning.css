@@ -1,0 +1,20 @@
+.calendar-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.calendar-cell {
+    border: solid 1px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+}
+
+.calendar-cell--selected {
+    background-color: var(--secondary-color);
+}
+
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
