@@ -1,0 +1,20 @@
+[
+   {
+        "name": "John Doe",
+        "role": "ancien",
+        "tasks": [
+            "discours",
+            "tg",
+            "présidence"
+        ]
+    },
+    {
+        "name": "James Bond",
+        "role": "assistant",
+        "tasks": [
+            "sono",
+            "perches",
+            "scène"
+        ]
+    }
+]

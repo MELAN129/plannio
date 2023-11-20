@@ -11,7 +11,7 @@ function MonthlyPlanning({ handleClick, selectedDates }) {
     // Get previous and next month
 
     const currentMonth = getMonthName(currentDate.getMonth());
-    const previousMonth = getMonthName(currentDate.getMonth() - 1)
+    const previousMonth = getMonthName(currentDate.getMonth() - 1);
     const nextMonth = getMonthName(currentDate.getMonth() + 1);
 
 
@@ -90,7 +90,7 @@ function getDatesToDisplay(currentDate) {
     currentDate.setDate(1)
     const monthNumber = currentDate.getMonth()
 
-    // // Get days on the month
+    // // Get days of the month
     while (currentDate.getMonth() === monthNumber) {
         datesToDisplay.push(currentDate.getDate());
         currentDate.setDate(currentDate.getDate() + 1)

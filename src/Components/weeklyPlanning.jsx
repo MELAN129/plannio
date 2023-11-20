@@ -1,14 +1,16 @@
+import { useState } from "react"
 import "../Styles/weeklyPlanning.css"
 
 function WeeklyPlanning() {
 
-    const date = new Date()
-    const dateOfTheDay = date.getDate()
-    const dateNumber = date.getDay()
+    const [dateToDisplay, setDateToDisplay] = useState(new Date());
+
+    const dateOfTheDay = dateToDisplay.getDate()
+    const dateNumber = dateToDisplay.getDay()
 
     const calculateWeekNumber = () => {
-        const startDate = new Date(date.getFullYear(), 0, 1);
-        const days = Math.floor((date - startDate) / (24 * 60 * 60 * 1000));
+        const startDate = new Date(dateToDisplay.getFullYear(), 0, 1);
+        const days = Math.floor((dateToDisplay - startDate) / (24 * 60 * 60 * 1000));
         const weekNumber = Math.ceil(days / 7)
         return weekNumber
     }
@@ -17,12 +19,26 @@ function WeeklyPlanning() {
     const dateDisplay = () => {
         return dateOfTheDay - dateNumber + 1
     }
+
     // const test = () => console.log(dateOfTheDay, dateNumber)
     // test()
+
     return (
         <div>
             <div className="week-display">
-                <h1 className="week-title">Semaine {weekNumber}</h1>
+                <div className="week-title">
+                    <button onClick={() => {
+                        setDateToDisplay(() => {
+                            return new Date(dateToDisplay.getTime() - 7 * 24 * 60 * 60 * 1000)
+                        })
+                    }}>Précedent</button>
+                    <h1>Semaine {weekNumber}</h1>
+                    <button onClick={() => {
+                        setDateToDisplay(() => {
+                            return new Date(dateToDisplay.getTime() + 7 * 24 * 60 * 60 * 1000)
+                        })
+                    }}>Suivant</button>
+                </div>
                 <div className="days-display">
                     <div className="day">
                         <h2>Lundi {dateDisplay()}

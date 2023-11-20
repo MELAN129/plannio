@@ -10,6 +10,8 @@
 
 .week-title {
     background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .days-display {
