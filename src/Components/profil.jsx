@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import "../Styles/profil"
 
 function Profil({ profil }) {
 
@@ -94,9 +95,9 @@ function Profil({ profil }) {
 
     return (
         <div>
-            <span>{profil.name}</span>
-            <span>{profil.role}</span>
-            <span>{profil.assignments}</span>
+            <span className="profil">{profil.name}</span>
+            <span className="profil">{profil.role}</span>
+            <span className="profil">{profil.assignments}</span>
             <ul>Groupes</ul>
             {usersGroups.map((group, index) => {
                 return (
